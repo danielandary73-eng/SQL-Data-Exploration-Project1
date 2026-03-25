@@ -2,18 +2,23 @@
 
 ## Project Overview
 
-**Project Title**: Retail Sales Analysis  
-**Level**: Beginner  
+**Project Title**: Retail Sales Analysis    
 **Database**: `p1_retail_db`
 
-This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
+This project focuses on analyzing retail sales data using SQL to uncover insights related to customer behavior, product performance, and sales trends. 
+The analysis involves data cleaning, exploration, and answering key business questions to support data-driven decision-making.
 
-## Objectives
+## Tools Used
 
-1. **Set up a retail sales database**: Create and populate a retail sales database with the provided sales data.
-2. **Data Cleaning**: Identify and remove any records with missing or null values.
-3. **Exploratory Data Analysis (EDA)**: Perform basic exploratory data analysis to understand the dataset.
-4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
+- SQL (MySQL Workbench 8.0)
+- Microsoft Excel (Data Cleaning)
+  
+## Project Workflow
+
+- Data cleaning and preparation
+- Exploratory data analysis (EDA)
+- Business-driven SQL queries
+- Insight generation
 
 ## Project Structure
 
@@ -85,7 +90,7 @@ FROM retail_sales
 WHERE 
     category = 'Clothing'
     AND 
-    TO_CHAR(sale_date, 'YYYY-MM') = '2022-11'
+    DATE_FORMAT(sale_date, '%Y-%m') = '2022-11'
     AND
     quantity >= 4
 ```
@@ -187,12 +192,12 @@ FROM hourly_sale
 GROUP BY shift
 ```
 
-## Findings
+## Key Insights
 
-- **Customer Demographics**: The dataset includes customers from various age groups, with sales distributed across different categories such as Clothing and Beauty.
-- **High-Value Transactions**: Several transactions had a total sale amount greater than 1000, indicating premium purchases.
-- **Sales Trends**: Monthly analysis shows variations in sales, helping identify peak seasons.
-- **Customer Insights**: The analysis identifies the top-spending customers and the most popular product categories.
+- A small group of customers contributes significantly to total revenue.
+- Certain product categories generate higher sales compared to others.
+- Sales activity varies across different times of the day.
+- Monthly trends reveal fluctuations that may indicate seasonal demand patterns.
 
 ## Reports
 
@@ -202,26 +207,14 @@ GROUP BY shift
 
 ## Conclusion
 
-This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
+This project demonstrates how SQL can be used to transform raw transactional data into actionable business insights. It highlights key analytical techniques such as aggregation, filtering, and trend analysis, which are essential for data analyst roles.
 
-## How to Use
 
-1. **Clone the Repository**: Clone this project repository from GitHub.
-2. **Set Up the Database**: Run the SQL scripts provided in the `database_setup.sql` file to create and populate the database.
-3. **Run the Queries**: Use the SQL queries provided in the `analysis_queries.sql` file to perform your analysis.
-4. **Explore and Modify**: Feel free to modify the queries to explore different aspects of the dataset or answer additional business questions.
 
-## Author - Zero Analyst
+## Author
+
+Daniel Al Andari  
+Aspiring Data Analyst
 
 This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
 
-### Stay Updated and Join the Community
-
-For more content on SQL, data analysis, and other data-related topics, make sure to follow me on social media and join our community:
-
-- **YouTube**: [Subscribe to my channel for tutorials and insights](https://www.youtube.com/@zero_analyst)
-- **Instagram**: [Follow me for daily tips and updates](https://www.instagram.com/zero_analyst/)
-- **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/najirr)
-- **Discord**: [Join our community to learn and grow together](https://discord.gg/36h5f2Z5PK)
-
-Thank you for your support, and I look forward to connecting with you!
